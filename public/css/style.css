@@ -1,0 +1,52 @@
+form {
+    margin-top: 5%;
+}
+
+.content {
+    width: 310px;
+    margin: auto;
+     background-color: rgb(255, 255, 220); 
+    box-shadow: 5px 5px 5px 5px #dadada;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-left: 50px;
+    transition: width 2s;
+    /*animation*/
+    position: relative;
+    -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.8s
+}
+
+h3 {
+    text-align: center;
+    font-family: monospace;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+
+  input[type="submit"] {
+      background-color: white;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #dadada;
+  }
+
+  i {
+      font-size: 2rem;
+      font-style: normal;
+  }
+
+  span{
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+  
