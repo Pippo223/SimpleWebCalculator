@@ -10,28 +10,61 @@
 </head>
 <body>
 
-    <form action="/calculator" method="POST">
+    <form action="/calculator" method="POST" onsubmit= "return validation()">
     <h3>Simple Web Calculator</h3>
         <div class = content>
             <div>
     <select name="operation" id="operation">
-        <option value="add" selected>Add</option>
+        <option value="" selected>--Select Operator--</option>
+        <option value="add">Add</option>
         <option value="multiply">Multiply</option>
     </select>
 </div>
 
 <div>
-    <input type="number" name="fnum" id="fnum" required>
+    <input type="text" name="fnum" id="fnum" required>
 </div>
 
 <div>
-    <input type="number" name="snum" id="snum" required>
+    <input type="text" name="snum" id="snum" required>
 </div>
 
 <input type="submit" value="Solve" id="solve">
 
 </div>
 </form>
+<script>
+    
+    const operation = document.getElementById('operation')
+    
+    //const solve = document.getElementById('solve')
+
+    //solve.addEventListener('click', validation)
+
+    function validation() {
+        const fnum = +document.getElementById('fnum').value
+        const snum = +document.getElementById('snum').value
+        const index = operation.selectedIndex
+
+        if(isNaN(fnum) || isNaN(snum) ) {
+            
+            alert('input must be a number!')
+            return false
+          }
+          
+
+         if(operation.options[index].value === '')  {
+             alert('Select an operator!')
+             return false
+         }
+
+         return true
+
+    }
+
+</script>
 
 </body>
+
+
 </html>

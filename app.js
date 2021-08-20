@@ -21,6 +21,7 @@ app.post('/calculator', function (req, res) {
     const { operation, fnum, snum } = req.body;
     const num1 = Number(fnum);
     const num2 = Number(snum);
+
     const calculator = new Calculator(num1, num2)
     if(operation === 'add') { 
         const result = calculator.add();
