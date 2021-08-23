@@ -26,12 +26,12 @@ app.post('/calculator', function (req, res) {
     if(operation === 'add') { 
         const result = calculator.add();
         const str = `${num1} + ${num2} = `
-        res.render('results', {str, result})
+        res.render('results', {str, result}).sendStatus(200)
         return
     } else if (operation === 'multiply') {
         const result = calculator.product();
         const str = `${num1} X ${num2} = `
-        res.render('results', {str, result})
+        res.render('results', {str, result}).sendStatus(200)
         return
     }
 }
@@ -45,3 +45,5 @@ catch(err) {
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
+
+module.exports = app
