@@ -10,6 +10,7 @@
   "author": "Philip O. Asare",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.4",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "jsdom": "^16.7.0",

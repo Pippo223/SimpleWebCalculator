@@ -1,5 +1,7 @@
 const assert = require('assert')
 const Calculator = require('../controller/calculator')
+const chai = require('chai')
+const expect = chai.expect
 
 
 // it('should return true', () => {
@@ -54,16 +56,13 @@ it ('correctly calculates the product of a negative and positive number', () => 
     assert.equal(expected, result)
 })
 
-it ('throws an error when a string input is detected ', () => {
-    const calculator = new Calculator('jon', 10)
-    const result = calculator.validateInput()
-    
-    assert.equal(result, false)
-})
+// it('should return true if both inputs are numbers', () => {
+//     const calculator = new Calculator(2, 3)
+//     expect(calculator.validateInput()).to.be.true
+// })
 
-it ('runs when two numbers are provided as input', () => {
-    const calculator = new Calculator(5, 8)
-    const result = calculator.validateInput()
-    
-    assert.equal(result, true)
-})
+// it('should return false if at least one input is not a number', () => {
+//     const calculator = new Calculator(2, 'jon')
+//     expect(calculator.validateInput()).to.be.false
+// })
+
