@@ -13,6 +13,13 @@ product() {
     let product = this.a * this.b
     return product;
 }
+
+validateInput() {
+    if(isNaN(this.a + this.b) || isNaN(this.a * this.b)) {
+        return false
+    }
+    return true
+}
  
 }
 
